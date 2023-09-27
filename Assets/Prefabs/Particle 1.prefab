@@ -12,7 +12,7 @@ GameObject:
   - component: {fileID: 8423461047832904371}
   - component: {fileID: 590648958440414130}
   - component: {fileID: 7480456240513016854}
-  - component: {fileID: 2619389290256309806}
+  - component: {fileID: -7426209926448314181}
   m_Layer: 0
   m_Name: Particle 1
   m_TagString: Untagged
@@ -33,7 +33,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 2
+  m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!33 &8423461047832904371
 MeshFilter:
@@ -97,10 +97,14 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 04ee629fcb5944caf8573fac0c676baf, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  velocity: {x: 0, y: 0}
-  damping: 0
-  acceleration: {x: 0, y: 0}
---- !u!114 &2619389290256309806
+  velocity: {x: 10, y: 10}
+  damping: 0.99
+  inverseMass: 0
+  acceleration: {x: 0, y: -9.81}
+  speed: 10
+  lifeSpan: 1
+  elapsedTime: 0
+--- !u!114 &-7426209926448314181
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -109,6 +113,9 @@ MonoBehaviour:
   m_GameObject: {fileID: 8884174885331103408}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 7b1bbf2f29e114363b217c4c53144b0f, type: 3}
+  m_Script: {fileID: 11500000, guid: 75793df9f7908334b9dd942c78c6deab, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  _thisParticle: {fileID: 7480456240513016854}
+  _particlePrefab: {fileID: 8884174885331103408, guid: 1979970f487c9426688fdb3e1f7b5493, type: 3}
+  _numSpawnedParticles: 8

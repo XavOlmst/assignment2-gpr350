@@ -183,8 +183,8 @@ Camera:
   near clip plane: 0.3
   far clip plane: 1000
   field of view: 60
-  orthographic: 0
-  orthographic size: 5
+  orthographic: 1
+  orthographic size: 19.58833
   m_Depth: -1
   m_CullingMask:
     serializedVersion: 2
@@ -223,6 +223,38 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: -6034438818361066306, guid: 9c4692a3184f446e4a379adef7110d76, type: 3}
+      propertyPath: rotateSpeed
+      value: 30
+      objectReference: {fileID: 0}
+    - target: {fileID: -6034438818361066306, guid: 9c4692a3184f446e4a379adef7110d76, type: 3}
+      propertyPath: _weaponPrefabs.Array.size
+      value: 6
+      objectReference: {fileID: 0}
+    - target: {fileID: -6034438818361066306, guid: 9c4692a3184f446e4a379adef7110d76, type: 3}
+      propertyPath: _weaponPrefabs.Array.data[0]
+      value: 
+      objectReference: {fileID: 8884174885331103408, guid: 1979970f487c9426688fdb3e1f7b5493, type: 3}
+    - target: {fileID: -6034438818361066306, guid: 9c4692a3184f446e4a379adef7110d76, type: 3}
+      propertyPath: _weaponPrefabs.Array.data[1]
+      value: 
+      objectReference: {fileID: 8884174885331103408, guid: 3ec3dde09b03d4a8c882ace0dbd6144c, type: 3}
+    - target: {fileID: -6034438818361066306, guid: 9c4692a3184f446e4a379adef7110d76, type: 3}
+      propertyPath: _weaponPrefabs.Array.data[2]
+      value: 
+      objectReference: {fileID: 8884174885331103408, guid: 506cbcd830e174a2ea3d46b9f06619a7, type: 3}
+    - target: {fileID: -6034438818361066306, guid: 9c4692a3184f446e4a379adef7110d76, type: 3}
+      propertyPath: _weaponPrefabs.Array.data[3]
+      value: 
+      objectReference: {fileID: 8884174885331103408, guid: 70924c9b71c6248e39c57c697933bb0f, type: 3}
+    - target: {fileID: -6034438818361066306, guid: 9c4692a3184f446e4a379adef7110d76, type: 3}
+      propertyPath: _weaponPrefabs.Array.data[4]
+      value: 
+      objectReference: {fileID: 8884174885331103408, guid: 7e63237759e6ec34bb5a496c2d623f7a, type: 3}
+    - target: {fileID: -6034438818361066306, guid: 9c4692a3184f446e4a379adef7110d76, type: 3}
+      propertyPath: _weaponPrefabs.Array.data[5]
+      value: 
+      objectReference: {fileID: 8884174885331103408, guid: 3f3c73392f37a7a4ab2960d46bfb906f, type: 3}
     - target: {fileID: 2842070255662269805, guid: 9c4692a3184f446e4a379adef7110d76, type: 3}
       propertyPath: m_RootOrder
       value: 1

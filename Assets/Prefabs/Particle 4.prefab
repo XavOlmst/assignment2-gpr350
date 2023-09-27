@@ -12,9 +12,9 @@ GameObject:
   - component: {fileID: 8423461047832904371}
   - component: {fileID: 590648958440414130}
   - component: {fileID: 7480456240513016854}
-  - component: {fileID: -73168115973482995}
+  - component: {fileID: -1229420751197006950}
   m_Layer: 0
-  m_Name: Particle 2
+  m_Name: Particle 4
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -100,11 +100,11 @@ MonoBehaviour:
   velocity: {x: 10, y: 10}
   damping: 0.99
   inverseMass: 0
-  acceleration: {x: 0, y: 0}
+  acceleration: {x: 0, y: -9.81}
   speed: 10
-  lifeSpan: 7
+  lifeSpan: 5
   elapsedTime: 0
---- !u!114 &-73168115973482995
+--- !u!114 &-1229420751197006950
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -113,7 +113,9 @@ MonoBehaviour:
   m_GameObject: {fileID: 8884174885331103408}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 8db853f91ce83e048a112a064b025607, type: 3}
+  m_Script: {fileID: 11500000, guid: 53233e0521f3b6347bcee92c16d320a2, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   _particle: {fileID: 7480456240513016854}
+  teleportDelay: 1
+  timeInTeleport: 1

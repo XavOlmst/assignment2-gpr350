@@ -1,10 +1,16 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.InputSystem;
+using UnityEngine.UIElements;
+using Time = Codice.Client.Common.Time;
 
 public class Gun : MonoBehaviour
 {
+    [SerializeField] private float rotateSpeed;
+    [SerializeField] private List<GameObject> _weaponPrefabs;
+    private int _curWeaponIndex = 0;
     /// <summary>
     /// The direction of the initial velocity of the fired projectile. That is,
     /// this is the direction the gun is aiming in.
@@ -13,8 +19,7 @@ public class Gun : MonoBehaviour
     {
         get
         {
-            // TODO: YOUR CODE HERE
-            return Vector3.zero;
+            return transform.up;
         }
     }
 
@@ -26,8 +31,7 @@ public class Gun : MonoBehaviour
     {
         get
         {
-            // TODO: YOUR CODE HERE
-            return Vector3.zero;
+            return transform.position;
         }
     }
 
@@ -39,8 +43,7 @@ public class Gun : MonoBehaviour
     {
         get
         {
-            // TODO: YOUR CODE HERE
-            return null;
+            return _weaponPrefabs[_curWeaponIndex];
         }
     }
 
@@ -51,8 +54,12 @@ public class Gun : MonoBehaviour
     /// <returns>The newly created GameObject.</returns>
     public GameObject Fire()
     {
-        // TODO: YOUR CODE HERE
-        return null;
+        GameObject spawnedWeapon = Instantiate(CurrentWeapon, SpawnPosition, Quaternion.identity);
+        Particle2D weaponParticle = spawnedWeapon.GetComponent<Particle2D>();
+        weaponParticle.velocity = FireDirection.normalized * weaponParticle.speed;
+        
+        
+        return spawnedWeapon;
     }
 
     /// <summary>
@@ -64,10 +71,26 @@ public class Gun : MonoBehaviour
     public void CycleNextWeapon()
     {
         // TODO: YOUR CODE HERE
+        if (_curWeaponIndex == _weaponPrefabs.Count - 1)
+            _curWeaponIndex = 0;
+        else
+            _curWeaponIndex++;
     }
 
     void Update()
     {
         // TODO: YOUR CODE HERE (handle all input in Update, not FixedUpdate!)
+        
+        if (Keyboard.current.enterKey.wasPressedThisFrame)
+            Fire();
+
+        if(Keyboard.current.wKey.wasPressedThisFrame)
+            CycleNextWeapon();
+        
+        if (Keyboard.current.digit1Key.isPressed)
+            transform.Rotate(0, 0, rotateSpeed * UnityEngine.Time.fixedDeltaTime);
+        
+        if (Keyboard.current.digit2Key.isPressed)
+            transform.Rotate(0, 0, -rotateSpeed * UnityEngine.Time.fixedDeltaTime);
     }
 }
