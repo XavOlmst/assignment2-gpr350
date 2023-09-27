@@ -33,6 +33,8 @@ public class Weapon1 : MonoBehaviour
                 spawnedParticle.velocity *= new Vector2(Mathf.Cos((angleSeparation * i + startAngle) * Mathf.Deg2Rad),
                     Mathf.Sin((angleSeparation * i + angleSeparation) * Mathf.Deg2Rad)).normalized;
             }
+
+            Destroy(gameObject);
         }
     }
 }
