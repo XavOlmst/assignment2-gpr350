@@ -19,7 +19,7 @@ public class Weapon3 : MonoBehaviour
 
     private void Update()
     {
-        if ( _timeSinceLastInvert > _timePerAccelInvert)
+        if ( _timeSinceLastInvert > _timePerAccelInvert) // i like that
         {
             _particle.acceleration *= -1;
             _timeSinceLastInvert = 0;

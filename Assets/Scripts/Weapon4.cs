@@ -11,7 +11,7 @@ public class Weapon4 : MonoBehaviour
     {
         if (_particle.elapsedTime > teleportDelay)
         {
-            Integrator.Integrate(_particle, timeInTeleport);
+            Integrator.Integrate(_particle, timeInTeleport); // i like this very much
             teleportDelay = _particle.lifeSpan + 3;
         }
     }

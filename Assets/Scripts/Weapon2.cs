@@ -16,6 +16,7 @@ public class Weapon2 : MonoBehaviour
 
     void Update()
     {
+        // clever
         _particle.velocity = new Vector2(Mathf.Cos(_particle.elapsedTime) * _initVelocity.x, Mathf.Sin(_particle.elapsedTime) * _initVelocity.y);
     }
 }

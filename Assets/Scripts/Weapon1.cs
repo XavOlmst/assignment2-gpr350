@@ -8,8 +8,8 @@ using Random = UnityEngine.Random;
 
 public class Weapon1 : MonoBehaviour
 {
-    [SerializeField] private Particle2D _particle;
-    [SerializeField] private GameObject _particlePrefab;
+    [SerializeField] private Particle2D _particle;          // i suggest using easier to understand names
+    [SerializeField] private GameObject _particlePrefab;    // for example _particleComponent and _particleToSpawnPrefab
     [SerializeField] private int _numSpawnedParticles = 3;
 
     void Start()
@@ -28,6 +28,7 @@ public class Weapon1 : MonoBehaviour
 
             for (int i = 0; i < _numSpawnedParticles; i++)
             {
+                // all good here
                 Particle2D spawnedParticle = Instantiate(_particlePrefab, transform.position, Quaternion.identity)
                     .GetComponent<Particle2D>();
                 spawnedParticle.velocity *= new Vector2(Mathf.Cos((angleSeparation * i + startAngle) * Mathf.Deg2Rad),

@@ -70,7 +70,7 @@ public class Gun : MonoBehaviour
     /// </summary>
     public void CycleNextWeapon()
     {
-        // TODO: YOUR CODE HERE
+        // TODO: YOUR CODE HERE // cleaner to remove these
         if (_curWeaponIndex == _weaponPrefabs.Count - 1)
             _curWeaponIndex = 0;
         else
@@ -79,6 +79,7 @@ public class Gun : MonoBehaviour
 
     void Update()
     {
+        // cleaner to remove these comments
         // TODO: YOUR CODE HERE (handle all input in Update, not FixedUpdate!)
         
         if (Keyboard.current.enterKey.wasPressedThisFrame)
@@ -88,7 +89,7 @@ public class Gun : MonoBehaviour
             CycleNextWeapon();
         
         if (Keyboard.current.digit1Key.isPressed)
-            transform.Rotate(0, 0, rotateSpeed * UnityEngine.Time.fixedDeltaTime);
+            transform.Rotate(0, 0, rotateSpeed * UnityEngine.Time.fixedDeltaTime); // clean to use .Rotate
         
         if (Keyboard.current.digit2Key.isPressed)
             transform.Rotate(0, 0, -rotateSpeed * UnityEngine.Time.fixedDeltaTime);
